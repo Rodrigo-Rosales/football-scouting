@@ -5,7 +5,7 @@ import requests
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 RAW_DIR = PROJECT_ROOT / "data" / "raw"
-BASE_URL = "https://raw.githubusercontent.com/statsbomb/open-data/master/data/matches"
+BASE_URL = "https://raw.githubusercontent.com/statsbomb/open-data/master/data"
 
 
 def download_matches(competition_id: int, season_id: int) -> Path:
@@ -21,7 +21,7 @@ def download_matches(competition_id: int, season_id: int) -> Path:
     Raises:
         requests.HTTPError: If the download fails.
     """
-    url = f"{BASE_URL}/{competition_id}/{season_id}.json"
+    url = f"{BASE_URL}/matches/{competition_id}/{season_id}.json"
 
     response = requests.get(url, timeout=30)
     response.raise_for_status()

@@ -1,7 +1,7 @@
 [project]
 name = "wc22-analysis"
 version = "0.1.0"
-description = "Add your description here"
+description = "Download, model and analyze StatsBomb's 2022 FIFA World Cup data with Python, DuckDB and SQL."
 readme = "README.md"
 authors = [
     { name = "Rodrigo Rosales", email = "rodrigo.rosales.c@gmail.com" }
