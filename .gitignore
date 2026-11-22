@@ -9,5 +9,8 @@ wheels/
 # Virtual environments
 .venv
 
-# raw data
+# Vscode settings
+.vscode
+
+# Raw data
 data/raw/
