@@ -2,7 +2,7 @@
 
 Find players who play alike, and see how the transfer market values them.
 
-A scouting tool built on [StatsBomb's open data](https://github.com/statsbomb/open-data) for the 2022 FIFA World Cup (Eventually it will include more tournamets). It turns every pass, shot and tackle into per-player profiles, groups players by playing style, and joins them to their market values. The goal: pick a player, and find the most similar players, sorted by price.
+A scouting tool built on [StatsBomb's open data](https://github.com/statsbomb/open-data) for the 2022 FIFA World Cup; more tournaments will follow. It turns every pass, shot and tackle into per-player profiles, groups players by playing style, and joins them to their market values. The goal: pick a player, and find the most similar players, sorted by price.
 
 ## Status
 

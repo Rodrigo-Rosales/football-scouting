@@ -29,7 +29,7 @@ def create_tables() -> dict[str, int]:
     return created_tables
 
 
-if __name__ == "__main__":    
+if __name__ == "__main__":
     tables = create_tables()
     print(tables)
 
