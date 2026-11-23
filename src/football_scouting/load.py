@@ -3,7 +3,7 @@ from pathlib import Path
 import duckdb
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
-DB_PATH = PROJECT_ROOT / "data" / "wc22.duckdb"
+DB_PATH = PROJECT_ROOT / "data" / "football.duckdb"
 
 SQL_FILES = {
     "teams": PROJECT_ROOT / "sql" / "create_teams.sql",
