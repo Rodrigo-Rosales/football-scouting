@@ -3,7 +3,7 @@ from pathlib import Path
 import duckdb
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
-DB_PATH = PROJECT_ROOT / "data" / "wc22.duckdb"
+DB_PATH = PROJECT_ROOT / "data" / "football_scouting.duckdb"
 
 SQL_FILES = {
     "teams": PROJECT_ROOT / "sql" / "create_teams.sql",
@@ -29,7 +29,7 @@ def create_tables() -> dict[str, int]:
     return created_tables
 
 
-if __name__ == "__main__":    
+if __name__ == "__main__":
     tables = create_tables()
     print(tables)
 
