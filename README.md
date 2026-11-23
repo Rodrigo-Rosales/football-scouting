@@ -42,7 +42,7 @@ uv run python -m football_scouting.load     # build the DuckDB tables; prints ro
 
 ```bash
 uv run ruff check .        # lint Python
-uv run ruff format         
+uv run ruff format         # format Python
 uv run sqlfluff lint sql/  # lint SQL (DuckDB dialect)
 ```
 
