@@ -19,7 +19,7 @@ Early stage, built in public. Match and team data load into DuckDB; event data i
 ## How it works
 
 ```
-StatsBomb open data (JSON) → extract.py → data/raw/ → load.py + sql/ → DuckDB (data/football.duckdb)
+StatsBomb open data (JSON) → extract.py → data/raw/ → load.py + sql/ → DuckDB (data/football_scouting.duckdb)
 ```
 
 1. **Extract:** `extract.py` downloads raw files into `data/raw/`, unchanged.
