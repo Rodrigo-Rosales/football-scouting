@@ -34,5 +34,5 @@ if __name__ == "__main__":
     print(tables)
 
     with duckdb.connect(DB_PATH) as con:
-        for table, path in SQL_FILES.items():
+        for table in SQL_FILES:
             con.sql(f"DESCRIBE {table}").show()

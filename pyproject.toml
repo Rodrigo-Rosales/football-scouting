@@ -22,4 +22,5 @@ build-backend = "uv_build"
 [dependency-groups]
 dev = [
     "ruff>=0.17.6",
+    "sqlfluff>=4.5.0",
 ]
