@@ -47,6 +47,7 @@ Built by: `sql/create_teams.sql`.
 
 ## Decisions
 - `stage_name` is kept next to `stage_id` instead of in a stages table: stages are a short, fixed list of labels.
+- Foreign keys are documented but not declared; they'll be checked by tests, as in analytics warehouses.
 
 ## Known gaps:
 - Scores include extra time but not penalty shootouts. The final reads 3–3, so the winner of a drawn knockout match can't be read from matches. It's in the events data.
