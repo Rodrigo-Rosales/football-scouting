@@ -34,7 +34,7 @@ def download_matches(competition_id: int, season_id: int) -> Path:
     return file_path
 
 def download_events(match_id: int) -> Path:
-    """Download a match events gitfrom StatBombs, unchanged.
+    """Download a match events from StatBombs, unchanged.
 
     Args:
         match_id: Statbombs match id.
@@ -57,6 +57,30 @@ def download_events(match_id: int) -> Path:
     
     return file_path
 
+def download_lineups(match_id: int) -> Path:
+    """Download a match lineups from StatBombs, unchanged.
+
+    Args:
+        match_id: Statbombs match id.
+
+    Returns:
+        The path of the saved JSON file in data/raw/lineups/.
+
+    Raises:
+        requests.HTTPError: If the download fails.
+    """
+
+    url = f"{BASE_URL}/lineups/{match_id}.json"
+
+    response = requests.get(url, timeout=30)
+    response.raise_for_status()
+
+    file_path = RAW_DIR / "lineups" / f"match_{match_id}.json"
+    file_path.parent.mkdir(parents=True, exist_ok=True)
+    file_path.write_text(response.text, encoding="utf-8")
+
+    return file_path
+
 
 if __name__ == "__main__":
     path = download_matches(43, 106)
@@ -70,3 +94,9 @@ if __name__ == "__main__":
 
     events = json.loads(path.read_text(encoding="utf-8"))
     print(f"Total events: {len(events)}")
+
+    path = download_lineups(3857276) 
+    print(path)
+
+    lineups = json.loads(path.read_text(encoding="utf-8"))
+    print(f"Total teams: {len(lineups)}")
